@@ -8,7 +8,6 @@ st.title(":cup_with_straw: Customize your Smoothie!:cup with straw")
 st.write(
     """Choose the fruits you want in your custom Smoothie!""")
 
-import streamlit as st
 
 name_on_order = st.text_input('Name on Smoothie:')
 st.write('The name on your Smoothie will be:', name_on_order)
@@ -44,7 +43,7 @@ if ingredients_list:
         sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients) 
-        values ('""" + ingredients_string + """')"""
+        values ('""" + ingredients_string + """', '"""+ name_on_order+ """')"""
 
     time_to_insert = st.button('Submit Order')
 
