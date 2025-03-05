@@ -49,7 +49,7 @@ if ingredients_list:
         VALUES ('{ingredients_string}', '{name_on_order}', FALSE, CURRENT_TIMESTAMP)
     """
 
-    st.write("Final SQL Query: ", my_insert_stmt)  # Debugging step
+    #st.write("Final SQL Query: ", my_insert_stmt)  # Debugging step
 
     # Button to submit order
     time_to_insert = st.button('Submit Order')
