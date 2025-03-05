@@ -43,5 +43,5 @@ if session is None:
     st.error("❌ Snowflake session is not active. Check connection settings.")
 
 import requests
-smoothiefroot_response = request.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response.json())
