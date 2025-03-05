@@ -39,9 +39,9 @@ if ingredients_list:
         
         st.subheader(fruit_chosen + ' Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on)
-        st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
+        fv_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
-    st.write("Selected Ingredients:", ingredients_string)
+    #st.write("Selected Ingredients:", ingredients_string)
 
     # Construct the SQL INSERT statement
     my_insert_stmt = f"""
