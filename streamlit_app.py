@@ -47,6 +47,9 @@ if ingredients_list:
 
     time_to_insert = st.button('Submit Order')
 
+
+    st.dataframe(pd_df)
+    st.stop()
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
 
