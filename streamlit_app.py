@@ -47,10 +47,8 @@ if ingredients_list:
 
     time_to_insert = st.button('Submit Order')
 
-    if ingredients_string:
+    if time_to_insert:
         session.sql(my_insert_stmt).collect()
-
         st.success('Your Smoothie is ordered!')
 
-import requests
 
